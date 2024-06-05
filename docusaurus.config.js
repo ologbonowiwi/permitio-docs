@@ -412,13 +412,6 @@ const config = {
             to: "/authentication/your-authentication",
           },
           { from: "/category/-work-with-authentication", to: "/category/work-with-authentication" },
-          {
-            from: [
-              "/overview/permit-sdlc",
-              "/how-to/manage-policy-lifecycle",
-            ],
-            to: "/category/policy-lifecycle",
-          },
         ],
       },
     ],
