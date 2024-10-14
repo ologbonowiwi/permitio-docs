@@ -1,0 +1,60 @@
+---
+sidebar_position: 2
+title: Configuration 101
+---
+
+Configuring Relationship-Based Access Control (ReBAC) policies might seem complex, but with Permit, it's straightforward. Follow this step-by-guide to easily configure and enforce ReBAC policies using the Permit dashboard.
+
+:::infoBefore We Start
+While this document will guide you through the process of configuring ReBAC policies, it is assumed that you have already set up your Permit account and have a basic [understanding of ReBAC](/how-to/build-policies/rebac/what-is-rebac) and [how Permit works](/overview/how-does-it-work).
+:::
+
+## Our ReBAC policy
+In the following guide, we will build ReBAC permissions of a dashboarding system. Here are some key points about our ReBAC policy:
+* In our system, we have two types of resources: `Dashboard` and `Widget`. `Dashboard` is a parent of `Widget`.
+* Users can get explicit permissions to a `Dashboard`/`Widget` *instance* with the `Owner`, `Viewer`, and `Analyst/Editor` roles. Each of the roles has different permissions.
+* User can get implicit grant for a `Widget` *instance* if they have access to the `Dashboard` instance that is a parent a `Widget`.
+
+TBD diagram
+
+## Configure Policies
+The first step of building policy, is to set up the policy schema in Permit UI. The policy schema is the part of the system that configure the permissions on the resources and roles. Let's start with creating the resources and roles:
+
+### 1. Create Resources and Roles
+The most fundemental component of a ReBAC policy is the resources and roles. Here is how we create them:
+1. In Permit dashboard, go to Resource screen.
+    TBD picture
+2. Click on the `Add Resource` button and create a new resource with the following details:
+    * Name: `Dashboard`
+    * Actions: `view`, `remove-widget`, `add-widget`, `edit`, `delete`, `create`
+    * Roles: `Owner`, `Viewer`, `Analyst`
+    TBD picture
+3. After saving the `Dashboard` resource, click on the `Add Resource` button and create another resource with the following details:
+    * Name: `Widget`
+    * Actions: `view`, `edit`, `delete`, `create`
+    * Roles: `Owner`, `Viewer`, `Editor`
+    TBD picture
+
+At this point, we have a `Dashboard` and `Widget` resources with their respective roles. Let's define what kind of relationships their instnace can have.
+
+### 2. Define Relations
+Now that we created the resources, we need to configure the possible relationships between them. Here is how we do it:
+1. In the `Resources` screen, click on the 3 dots icon to edit the `Dashboard` resource.
+2. In the `Relations` section, configure the `Dashboard` to be a parent of the `Widget` resource.
+    TBD picture
+
+### 3. Define Role Derivations
+
+### 4. Configure Permissions
+
+## Test the Policy
+
+### 1. Create Users
+
+### 2. Create Resources
+
+### 3. Define Relationships 
+
+### 4. Assign Roles
+
+### 5. Test the Policy
