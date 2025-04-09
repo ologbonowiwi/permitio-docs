@@ -127,8 +127,13 @@ html[data-theme="dark"] {
     margin-block-start: 1rem;
   }
 
+  h2 {
+    margin-top: calc(var(--ifm-h2-vertical-rhythm-top) * var(--ifm-leading));
+    margin-bottom: calc(var(--ifm-heading-vertical-rhythm-bottom) * var(--ifm-leading));
+  }
+
   //intro paragraphs
-  > header + p {
+  > p.intro-paragraph {
     color: var(--markdown-text-intro-c);
     font-size: 1.25rem;
 

@@ -4,9 +4,9 @@ title: Deploy Permit to Production
 description: "How to deploy the Permit PDP to Prod"
 ---
 
-When deploying to production, you might want to work with a local PDP (A Policy-Decision-Point microservice) within your VPC.
+<p className="intro-paragraph">When deploying to production, you might want to work with a local PDP (A Policy-Decision-Point microservice) within your VPC.
 The PDP is easy to install via Docker, and will ensure **zero-latency, great performance, high availability, and improved security**.
-Like all Permit customer deployed components, the [Permit PDP is open-source](https://github.com/permitio/PDP).
+Like all Permit customer deployed components, the [Permit PDP is open-source](https://github.com/permitio/PDP). </p>
 
 ## Architecture diagram
 
@@ -155,7 +155,7 @@ docker run -it -p 7766:7000 -p 8181:8181
 ```
 
 :::tip
-When using <HOST_BACKUP_DIR> instead of a volume, use `chmod` to set the permissions of <HOST_BACKUP_DIR> to 777. This allows the container to write logs properly.
+When using `<HOST_BACKUP_DIR>` instead of a volume, use `chmod` to set the permissions of `<HOST_BACKUP_DIR>` to 777. This allows the container to write logs properly.
 :::
 
 

@@ -7,10 +7,10 @@ import TimelineStep from "../../../src/components/timeline/TimelineStep";
 import TimelineWrapper from "../../../src/components/timeline/TimelineWrapper";
 import CodeBlock from "../../../src/components/code-block/CodeBlock";
 
-**FactDB is an embedded datastore** built to **handle massive data volumes** within the [PDP](/concepts/pdp/overview), making it
+<p className="intro-paragraph">**FactDB is an embedded datastore** built to **handle massive data volumes** within the [PDP](/concepts/pdp/overview), making it
 the default choice for all new Permit customers. Designed specifically for scalability, FactDB overcomes the limitations of
 traditional solutions like OPA, whose native data handling struggles with large datasets required by organizations with **tens
-of millions of users**.
+of millions of users**. </p>
 
 To achieve this, FactDB uses an embedded SQLite database stored directly in the PDP. During a permission check, it identifies
 the user and resource involved, queries the SQLite database to extract a targeted slice of relevant data, and sends this
